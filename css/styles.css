@@ -1,20 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&display=swap");
 
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&display=swap');
-
+:root {
+  --btnColor: #074799;
+  --textColor: white;
+}
 
 * {
   margin: 0;
   padding: 0;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
-.navbar h1{
+.navbar h1 {
   font-size: 2.5rem;
   font-family: "Dosis", serif;
 }
-.navbar h1 span{
+.navbar h1 span {
   color: #004e6d;
-  font-family:"Dancing Script", serif;
+  font-family: "Dancing Script", serif;
 }
 
 .navbar {
@@ -22,11 +25,11 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-evenly;
-  padding: 25px  35px;
+  padding: 25px 35px;
   position: fixed;
   width: 96%;
   top: 0px;
-  background-color: white;
+  background-color: var(--textColor);
 }
 .nav-right {
   display: flex;
@@ -39,6 +42,10 @@
   flex-direction: row;
   column-gap: 20px;
   text-transform: uppercase;
+  font-weight: 600;
+}
+.navlinks span {
+  cursor: pointer;
 }
 .hero {
   background-image: url("../image/landingPage.jpg");
@@ -56,21 +63,27 @@
   align-items: center;
   row-gap: 10px;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.4);
 }
 .hero h1 {
   font-size: 4rem;
-  color: white;
+  color: var(--textColor);
 }
 .hero p {
   font-size: 2rem;
-  color: white;
+  color: var(--textColor);
+}
+.hero-text{
+  width: 50%;
+  text-wrap: wrap;
+  text-align: center;
+  font-family: "Dosis", serif;
 }
 
 .hero-buttons :nth-child(1) {
-  background-color: #004e6d;
+  background-color: var(--btnColor);
   padding: 12px 40px;
-  color: white;
+  color: var(--textColor);
   font-size: 1.1rem;
   border: none;
   text-transform: uppercase;
@@ -85,9 +98,9 @@
 .hero-buttons :nth-child(2) {
   background-color: transparent;
   padding: 10px 40px;
-  color: #004e6d;
+  color: var(--btnColor);
   font-size: 1.1rem;
-  border: 2px solid #004e6d;
+  border: 2px solid var(--btnColor);
   text-transform: uppercase;
   cursor: pointer;
   font-weight: bold;
@@ -95,4 +108,227 @@
 }
 .hero-buttons :nth-child(2):hover {
   padding: 13px 44px;
+}
+
+.about-section{
+  width: 100%;
+  height: 100vh;
+  background-color: var(--textColor);
+  display: flex;
+  flex-direction:row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.aboutImageDiv{
+  width: 40%;
+  height: 70%;
+}
+.aboutImageDiv img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.aboutTextDiv{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 40%;
+  height: 80%;
+}
+.aboutTextDiv  h2 {
+  font-size: 3rem;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.829);
+}
+.aboutTextDiv  h2 span {
+  color: #004e6d ;
+}
+
+.aboutTextDiv p{
+  font-size: 1.3rem;
+  color: rgba(0, 0, 0, 0.6);
+  line-height: 1.3;
+  font-weight: 500;
+  margin-top: 10%;
+  font-family: "Dosis", serif;
+  text-align: justify;
+}
+
+.aboutTextDiv .aboutDiv {
+  margin-top: 20px;
+  width: 30%;
+}
+
+.aboutTextDiv .aboutDiv button{
+  background-color: #004e6d ;
+  border: none;
+  padding: 20px 30px;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.aboutTextDiv .aboutDiv button:hover{
+  color:var(--textColor);
+  background-color: blue;
+}
+
+.portfolio-section{
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(209, 206, 206, 0.185);
+  display: flex;
+  flex-direction:row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.portfolioTextDiv{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 40%;
+  height: 80%;
+}
+
+ .portfolioTextDiv h2 {
+  font-size: 3rem;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.829);
+}
+.portfolioTextDiv  h2 span {
+  color: #004e6d ;
+}
+
+.portfolioTextDiv p{
+  font-size: 1.3rem;
+  color: rgba(0, 0, 0, 0.6);
+  line-height: 1.3;
+  font-weight: 500;
+  margin-top: 10%;
+  font-family: "Dosis", serif;
+  text-align: justify;
+}
+
+.portfolioTextDiv .aboutDiv {
+  margin-top: 20px;
+  width: 30%;
+}
+
+.portfolioTextDiv .aboutDiv button{
+  background-color: #004e6d ;
+  border: none;
+  padding: 20px 30px;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.portfolioTextDiv .aboutDiv button:hover{
+  color:var(--textColor);
+  background-color: blue;
+}
+
+.portfolioImageDiv{
+  width: 40%;
+  height: 70%;
+}
+
+.portfolioImageDiv img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.pricing-section {
+  width: 100%;
+  height: 100vh;
+  background-color: var(--textColor);
+  display: flex;
+  flex-direction:column;
+  align-items: center;
+  padding-top: 3%;
+}
+.priceTextDiv{
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.priceTextDiv h2{
+  font-size: 3rem;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.829);
+}
+
+.priceTextDiv  h2 span {
+  color: #004e6d ;
+}
+
+.priceTextDiv p{
+  font-size: 1.3rem;
+  color: rgba(0, 0, 0, 0.6);
+  line-height: 1.3;
+  font-weight: 500;
+  font-family: "Dosis", serif;
+  text-align: justify;
+}
+
+.priceDiv{
+  width: 100%;
+  height: 80%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 4%;
+
+}
+
+.priceDiv .priceContentDiv {
+  width:30%;
+  height: 80%;
+  border: 2px solid var(--btnColor);
+  border-radius: 10px;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.priceContentDiv h3{
+  font-size: 1.5rem;
+  color: rgba(0, 0, 0, 0.829);
+}
+
+.priceContentDiv h3 span {
+  color: #004e6d ;
+  font-weight: bold;
+  font-size: 1.7rem;
+}
+.priceContentDiv p{
+  font-size: 1.3rem;
+  color: rgba(0, 0, 0, 0.6);
+  font-family: "Dosis", serif;
+  text-align: center;
+}
+.priceContentDiv ul{
+  height: 50%;
+  line-height: 50px;
+}
+
+.priceContentDiv ul li{
+  font-size: 1.5rem;
+  color: rgba(20, 12, 12, 0.74);
 }
