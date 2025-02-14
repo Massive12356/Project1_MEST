@@ -64,7 +64,7 @@
   align-items: center;
   row-gap: 10px;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.5);
 }
 .hero h1 {
   font-size: 4rem;
@@ -99,9 +99,9 @@
 .hero-buttons :nth-child(2) {
   background-color: transparent;
   padding: 10px 40px;
-  color: var(--btnColor);
+  color: var(--textColor);
   font-size: 1.1rem;
-  border: 2px solid var(--btnColor);
+  border: 2px solid var(--textColor);
   text-transform: uppercase;
   cursor: pointer;
   font-weight: bold;
@@ -219,7 +219,7 @@
 
 .portfolioTextDiv .aboutDiv {
   margin-top: 20px;
-  width: 30%;
+  width: 35%;
 }
 
 .portfolioTextDiv .aboutDiv button{
