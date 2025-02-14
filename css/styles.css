@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Oleo+Script:wght@400;700&display=swap');
 
 :root {
   --btnColor: #074799;
@@ -331,4 +332,237 @@
 .priceContentDiv ul li{
   font-size: 1.5rem;
   color: rgba(20, 12, 12, 0.74);
+}
+.Testimonials-section{
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(209, 206, 206, 0.185);;
+  display: flex;
+  flex-direction:column;
+  align-items: center;
+  padding-top: 3%;
+}
+.testimonialTextDiv{
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  line-height: 1.5;
+}
+
+.testimonialTextDiv h2{
+  font-size: 3rem;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.829);
+}
+.testimonialTextDiv h2 span {
+  color: #004e6d ;
+}
+
+.testimonialTextDiv p{
+  font-size: 1.3rem;
+  color: rgba(0, 0, 0, 0.6);
+  line-height: 1.3;
+  font-weight: 500;
+  font-family: "Dosis", serif;
+  text-align: justify;
+}
+.testimonialsDiv{
+  width: 90%;
+  height: 70%;
+  background-color: var(--textColor);
+  border:1.3px solid rgba(128, 128, 128, 0.384);
+  margin-top: 8%;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+.testClient1Div{
+  width: 30%;
+  height:80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.testClient1Div p{
+  font-size: 1.3rem;
+  line-height: 1.6;
+  color: rgba(0, 0, 0, 0.6);
+  font-family: "Dosis", serif;
+  font-weight: 400;
+  text-align: justify;
+  font-style: italic;
+}
+.nameImgDiv{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 70%;
+  margin-top: 4%;
+}
+.imgDiv{
+  width: 30%;
+  height: 90%;
+  margin-right: 4%;
+}
+.imgDiv img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  border:1px solid var(--btnColor);
+}
+.nameDiv h3{
+  font-family: "Dosis", serif;
+  font-size: bold;
+}
+.nameDiv span{
+  color: #004e6d ;
+}
+.contact-section{
+  width: 100%;
+  height: 110vh;
+  background-color: var(--textColor);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 3%;
+}
+.contactTextDiv{
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  line-height: 1.5;
+}
+
+.contactTextDiv h2{
+  font-size: 3rem;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.829);
+}
+.contactTextDiv h2 span {
+  color: #004e6d ;
+}
+
+.contactTextDiv p{
+  font-size: 1.3rem;
+  color: rgba(0, 0, 0, 0.6);
+  line-height: 1.3;
+  font-weight: 500;
+  font-family: "Dosis", serif;
+  text-align: justify;
+}
+
+.contactImageFormDiv{
+  width: 100%;
+  height: 80%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 6%;
+}
+
+.contactImageFormDiv .imgDiv{
+  width: 40%;
+  height: 90%;
+}
+.contactImageFormDiv .imgDiv img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  border: none;
+}
+
+.contactImageFormDiv .formDiv{
+  width: 40%;
+  height: 90%;
+  /* border: 1px solid var(--btnColor); */
+  display: flex;
+  flex-direction: column;
+}
+.formDiv .input1Div{
+  width: 100%;
+  height: 10%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.formDiv .input1Div input{
+  width: 40%;
+  padding: 20px;
+  border-radius: 5px;
+  border: 1px solid rgba(128, 128, 128, 0.384);
+  outline: none;
+  margin-bottom: 5%;
+}
+.formDiv .input2Div{
+  width: 100%;
+  height: 9%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.formDiv .input2Div input{
+  width: 92%;
+  padding: 15px;
+  border-radius: 5px;
+  border: 1px solid rgba(128, 128, 128, 0.384);
+  outline: none;
+  margin-bottom: 1%;
+  font-size: 1rem;
+}
+.textAreaButtonDiv{
+  width: 95%;
+  margin-top: 25%;
+  display: flex;
+  flex-direction: column;
+}
+
+.textAreaButtonDiv textarea{
+  border-radius:5px;
+  border: 1px solid rgba(128, 128, 128, 0.384);
+  outline: none;
+  margin-bottom: 1%;
+  resize: none;
+  padding: 10px;
+  box-sizing: border-box;
+  font-size: 1rem;
+}
+
+.formDiv ::placeholder{
+  font-family: "Dosis", serif;
+  font-size: 1rem;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.textAreaButtonDiv button{
+  background-color: #004e6d ;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  font-weight: 600;
+  font-size:1rem;
+  caret-color: var(--btnColor);
+}
+
+.textAreaButtonDiv button:hover{
+  color:var(--textColor);
+  background-color: rgba(0, 0, 255, 0.658);
 }
