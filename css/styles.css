@@ -3,7 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Oleo+Script:wght@400;700&display=swap');
 
 :root {
-  --btnColor: #074799;
+  --btnColor: #004e6d;
   --textColor: white;
 }
 
@@ -11,6 +11,9 @@
   margin: 0;
   padding: 0;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+html{
+  scroll-behavior: smooth;
 }
 .navbar h1 {
   font-size: 2.5rem;
@@ -35,7 +38,8 @@
 .nav-right {
   display: flex;
   flex-direction: row;
-  column-gap: 20px;
+  justify-items:space-between;
+  align-items: center;
 }
 
 .navlinks {
@@ -45,8 +49,29 @@
   text-transform: uppercase;
   font-weight: 600;
 }
-.navlinks span {
+.navlinks a {
   cursor: pointer;
+  color: var(--btnColor);
+  text-decoration: none;
+}
+
+.navlinks a:hover {
+  color: blue;
+}
+.contact-div{
+  background-color: #004e6d ;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 600;
+}
+.contact-div:hover{
+  background-color: blue;
+}
+.contact-div a{
+  color:white;
+  text-decoration: none;
 }
 .hero {
   background-image: url("../image/landingPage.jpg");
@@ -60,11 +85,11 @@
 .hero-overlay {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content:center;
   align-items: center;
-  row-gap: 10px;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
+  row-gap: 30px;
 }
 .hero h1 {
   font-size: 4rem;
@@ -92,9 +117,11 @@
   cursor: pointer;
   border-radius: 5px;
   margin-right: 20px;
+  text-decoration: none;
 }
 .hero-buttons :nth-child(1):hover {
   padding: 13px 44px;
+  background-color: blue;
 }
 .hero-buttons :nth-child(2) {
   background-color: transparent;
@@ -106,6 +133,7 @@
   cursor: pointer;
   font-weight: bold;
   border-radius: 5px;
+  text-decoration: none;
 }
 .hero-buttons :nth-child(2):hover {
   padding: 13px 44px;
@@ -248,7 +276,92 @@
   object-fit: cover;
   border-radius: 10px;
 }
+.services-section{
+  width: 100%;
+  height: 100vh;
+  background-color: var(--textColor);
+  display: flex;
+  flex-direction:column;
+  align-items: center;
+  padding-top: 3%;
+}
+.servicesTextDiv{
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
 
+.servicesTextDiv h2{
+  font-size: 3rem;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.829);
+}
+.servicesTextDiv  h2 span {
+  color: #004e6d ;
+}
+
+.servicesTextDiv p{
+  font-size: 1.3rem;
+  color: rgba(0, 0, 0, 0.6);
+  line-height: 1.3;
+  font-weight: 500;
+  font-family: "Dosis", serif;
+  text-align: justify;
+}
+
+.servicesDiv{
+  width: 100%;
+  height: 80%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 4%;
+}
+.serviceContentDiv{
+  width: 30%;
+  height: 40%;
+  border: 1.8px solid var(--btnColor);
+  border-radius: 10px;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+.serviceContentDiv:hover{
+  background-color: rgba(0, 0, 255, 0.068);
+}
+.logoDiv{
+  width:50%;
+  height: 30%;
+  /* background-color: aqua; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+.logoDiv img{
+  width: 32%;
+}
+.serviceContentDiv h3{
+   font-size: 1.8rem;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.774);
+  font-family: "Dosis", serif;
+  text-align: justify;
+}
+
+.serviceContentDiv p{
+  font-size: 1.1rem;
+  color: rgba(0, 0, 0, 0.6);
+  font-family: "Dosis", serif;
+  text-align: center;
+}
 .pricing-section {
   width: 100%;
   height: 100vh;
@@ -300,12 +413,16 @@
 .priceDiv .priceContentDiv {
   width:30%;
   height: 80%;
-  border: 2px solid var(--btnColor);
+  border: 1.8px solid var(--btnColor);
   border-radius: 10px;
   display:flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
+  cursor: pointer;
+}
+.priceDiv .priceContentDiv:hover{
+  background-color: rgba(0, 0, 255, 0.068);
 }
 
 .priceContentDiv h3{
@@ -564,5 +681,71 @@
 
 .textAreaButtonDiv button:hover{
   color:var(--textColor);
-  background-color: rgba(0, 0, 255, 0.658);
+  background-color: blue;
+}
+
+/* testing popUpButton */
+/* Modal Background */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Modal Content */
+.modal-content {
+    background: white;
+    padding: 20px;
+    width: 90%;
+    height: 70vh;
+    text-align: center;
+    border-radius: 8px;
+    position: relative;
+}
+.modal-content h2{
+  font-size: 3rem;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.829);
+}
+.modal-content h2 span {
+  color: #004e6d ;
+}
+
+.modal-content .para{
+  font-size: 1.3rem;
+  color: rgba(0, 0, 0, 0.6);
+  line-height: 1.3;
+  font-weight: 500;
+  font-family: "Dosis", serif;
+  text-align: center;
+}
+
+/* Close Button */
+.close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/* Portfolio Items */
+.portfolio-items {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.item {
+    background: #f4f4f4;
+    padding: 10px;
+    border-radius: 5px;
 }

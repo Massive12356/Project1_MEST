@@ -6,35 +6,37 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="./css/styles.css">
     <title>Developers</title>
+    <script src="./script/popUp.js" defer></script>
 </head>
 <body>
     <nav class="navbar">
         <h1>Deve<span>lopers</span></h1>
         <div class="nav-right">
             <div class="navlinks">
-                <span>Home</span>
-                <span>About Us</span>
-                <span>Portfolio</span>
-                <span>Pricing</span>
-                <span>Testimonials</span>
-                <span> Contact Us</span>
+                <a href="#home">Home</a>
+                <a href="#about">About Us</a>
+                <a href="#portfolio">Portfolio</a>
+                <a href="#pricing">Pricing</a>
+                <a href="#testimonials">Testimonials</a>
             </div>
-            <div><i class="fa fa-search" aria-hidden="true"></i></div>
+        </div>
+        <div class="contact-div">
+            <a href="#contact"> Contact Us</a>
         </div>
     </nav>
-    <section class="hero">
+    <section class="hero" id="home">
         <div class="hero-overlay">
             <h1>Turning Ideas into Digital Reality</h1>
             <div class="hero-text">
                 <p>No idea is too complex for us—we build customer-centric, user-friendly websites tailored to your vision.</p>
             </div>
             <div class="hero-buttons">
-                <button>Read More</button>
-                <button>Our Services</button>
+                <a href="#">Read More</a>
+                <a href="#services">Our Services</a>
             </div>
         </div>
     </section>
-    <section class="about-section">
+    <section class="about-section" id='about'>
         <div class="aboutImageDiv">
             <img src="./image/aboutUsImg.jpg" alt="" srcset="">
         </div>
@@ -47,21 +49,105 @@
             </div>
         </div>
     </section>
-    <section class="portfolio-section">
+    <section class="portfolio-section" id="portfolio">
         <div class="portfolioTextDiv">
             <h2>Our <span>Portfolio</span></h2>
             <p>Explore our portfolio to discover a wide range of projects that reflect our expertise in software development, web solutions, and cutting-edge digital experiences. Each project tells a story of collaboration, innovation, and a dedication to meeting our clients' goals. We take pride in delivering tailored solutions for businesses of all sizes, ensuring that every product is optimized for performance, functionality, and user satisfaction.
             Our work spans various industries, from e-commerce and real estate to health and finance, showcasing our ability to adapt and create solutions that meet diverse business needs. Whether it’s a responsive website, a custom software application, or a scalable cloud-based system, our focus remains the same—building technology that transforms ideas into reality.</p>
             <div class="aboutDiv">
-                <button> VIEW PROJECTS </button>
+                <button id="openModal"> VIEW PROJECTS </button>
             </div>
         </div>
 
         <div class="portfolioImageDiv">
             <img src="./image/image1.jpg" alt="" srcset="">
         </div>
+
+        <!-- //testing popup button -->
+        <!-- Portfolio Modal (Hidden Initially) -->
+    <div id="portfolioModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Our <span>work</span></h2>
+            <p class="para">Here are some of the projects we’ve worked on:</p>
+        
+        <div class="portfolio-items">
+            <div class="item">
+                <h3>Project 1</h3>
+                <p>E-commerce platform with a seamless shopping experience.</p>
+            </div>
+            <div class="item">
+                <h3>Project 2</h3>
+                <p>Custom real estate website with property listing management.</p>
+            </div>
+            <div class="item">
+                <h3>Project 3</h3>
+                <p>AI chatbot for customer support automation.</p>
+            </div>
+        </div>
+    </div>
+</div>
     </section>
-    <section class="pricing-section">
+
+    <section class="services-section" id="services">
+        <div class="servicesTextDiv">
+            <h2>Expert <span>Solutions</span></h2>
+            <p>Innovative digital solutions tailored to elevate your business. From web development to cloud solutions, we deliver technology that drives success.</p>
+        </div>
+
+        <div class="servicesDiv">
+            <div class="serviceContentDiv">
+                <div class="logoDiv">
+                    <img src="./image/webDevIcon.svg" alt="" srcset="">
+                </div>
+                <h3>Web Development</h3>
+                <p>We build responsive websites that work on all major browsers and devices.</p>
+            </div>
+            
+            <div class="serviceContentDiv">
+                <div class="logoDiv">
+                    <img src="./image/mobileAppIcon.svg" alt="" srcset="">
+                </div>
+                <h3>Mobile App Development</h3>
+                <p>We develop native mobile apps for iOS and Android platforms.</p>
+            </div>
+            
+            <div class="serviceContentDiv">
+                <div class="logoDiv">
+                    <img src="./image/cloudIcon.svg" alt="" srcset="">
+                </div>
+                <h3>Cloud Solutions</h3>
+                <p>We help businesses set up and manage cloud-based solutions.</p>
+            </div>
+            
+            <div class="serviceContentDiv">
+                <div class="logoDiv">
+                    <img src="./image/ecommerceIcon.svg" alt="" srcset="">
+                </div>
+                <h3>E-commerce Solutions</h3>
+                <p>We help businesses analyze and optimize their data.</p>
+            </div>
+            
+            <div class="serviceContentDiv">
+                <div class="logoDiv">
+                    <img src="./image/ITcosultIcon.svg" alt="" srcset="">
+                </div>
+                <h3>IT Consultancy</h3>
+                <p>We help businesses analyze and optimize their data.</p>
+            </div>
+            
+            <div class="serviceContentDiv">
+                <div class="logoDiv">
+                    <img src="./image/SeoIcon.svg" alt="" srcset="">
+                </div>
+                <h3>SEO Optimization</h3>
+                <p>We help businesses improve their online visibility and rankings.</p>
+            </div>
+        </div>
+
+
+    </section>
+    <section class="pricing-section" id="pricing">
         <div class="priceTextDiv">
             <h2>Pricing  <span>Plans</span></h2>
             <p>Our pricing is affordable and tailored to meet your needs.</p>
@@ -102,7 +188,7 @@
             </div>
         </div>
     </section>
-    <section class="Testimonials-section">
+    <section class="Testimonials-section" id="testimonials">
         <div class="testimonialTextDiv">
             <h2>What Our <span>Clients Have to Say</span></h2>
             <p>Client satisfaction is at the heart of everything we do. Discover how our solutions have made a difference for businesses like yours.</p>
@@ -135,7 +221,7 @@
         </div>
         </div>
     </section>
-    <section class="contact-section">
+    <section class="contact-section" id="contact">
         <div class="contactTextDiv">
             <h2>Get <span>In Touch With Us</span></h2>
             <p>Ready to grow your digital presence? Contact us and let’s make it happen!</p>
